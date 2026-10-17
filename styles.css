@@ -1,0 +1,830 @@
+/* 
+ * BLINDING BRIGHT EYE-STRAIN THEME & RAGEBAIT STYLING
+ * Engineered with painfully high luminance, low-contrast pastels, and jarring neon accents 
+ * that force the user to squint and strain their eyes!
+ */
+
+:root {
+  /* Blinding, searing bright background palette */
+  --bg-primary: #ffffec;
+  --bg-secondary: #fefce8;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-input: #ffffff;
+  
+  /* Eye-straining low-contrast and glaring neon colors */
+  --border-color: rgba(254, 240, 138, 0.85);
+  --border-glow: #fef08a;
+  --neon-yellow: #facc15;
+  --neon-lime: #a3e635;
+  --neon-cyan: #38bdf8;
+  --neon-magenta: #f43f5e;
+  
+  /* Hard-to-read low-contrast text on bright backgrounds */
+  --text-main: #64748b;         /* Faint slate on glaring white - hard to read! */
+  --text-dim: #94a3b8;          /* Very faint text */
+  --text-barely-visible: #cbd5e1; /* Requires squinting */
+  --text-heading: #1e293b;
+  --text-glare: #eab308;
+  
+  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  /* Painfully bright, retina-burning background gradients */
+  background-image: 
+    radial-gradient(circle at 10% 20%, #fef08a 0%, #ffffd0 35%, transparent 60%),
+    radial-gradient(circle at 90% 80%, #bae6fd 0%, #e0f2fe 30%, transparent 60%),
+    radial-gradient(circle at 50% 50%, #fbcfe8 0%, #fefce8 40%, transparent 70%);
+  background-attachment: fixed;
+}
+
+/* Eye-strain subtle shimmer */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3) 2px,
+    rgba(254, 240, 138, 0.15) 2px,
+    rgba(254, 240, 138, 0.15) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* App container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Nav Header */
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef9c3;
+  border: 1px solid #fde047;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ca8a04;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+}
+
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulse-dot 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+/* Blinding Glossy White Cards */
+.auth-card, .profile-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border: 2px solid #fef08a;
+  border-radius: 24px;
+  padding: 36px 32px;
+  box-shadow: 
+    0 20px 40px -10px rgba(234, 179, 8, 0.15),
+    0 0 50px rgba(255, 255, 255, 0.9),
+    0 0 0 1px #fef9c3;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.auth-header, .profile-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  /* Low-contrast bright gradient title */
+  background: linear-gradient(135deg, #0284c7 0%, #ca8a04 50%, #e11d48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  font-size: 0.85rem;
+  /* Hard-to-read faint gray on bright background */
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  /* Low contrast mustard/faint slate text */
+  color: #64748b;
+  letter-spacing: 0.01em;
+}
+
+.field-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #fef08a;
+  color: #a16207;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: #cbd5e1;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+/* Inputs with painfully bright background and faint border */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  height: 48px;
+  background: #fefce8;
+  border: 1.5px solid #fef08a;
+  border-radius: 12px;
+  padding: 0 16px 0 44px;
+  color: #334155;
+  font-size: 0.95rem;
+  outline: none;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input::placeholder {
+  /* Blindingly low-contrast placeholder */
+  color: #d1d5db;
+}
+
+input:focus {
+  border-color: #38bdf8;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);
+}
+
+/* Locked Username State */
+.input-locked {
+  background-color: #fee2e2 !important;
+  border-color: #f87171 !important;
+  color: #b91c1c !important;
+  cursor: not-allowed !important;
+  animation: input-shake 0.3s ease;
+}
+
+@keyframes input-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.lock-alert-banner {
+  display: none;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  font-size: 0.74rem;
+  font-weight: 600;
+  animation: shake 0.3s ease;
+}
+
+.lock-alert-banner.show {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Password Alert Exposed State */
+.password-exposed input {
+  border-color: #ef4444 !important;
+  color: #dc2626 !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px !important;
+  background: #fff1f2 !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.25) !important;
+}
+
+.password-warning-banner {
+  display: none;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fee2e2;
+  border: 1px solid #f87171;
+  color: #991b1b;
+  font-size: 0.76rem;
+  font-weight: 600;
+  animation: shake 0.4s ease;
+}
+
+.password-warning-banner.show {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.input-action-btn {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Notice pill */
+.notice-pill {
+  font-size: 0.74rem;
+  color: #0284c7;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 18px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all 0.25s ease;
+  font-weight: 600;
+}
+
+.notice-pill.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Criteria checklist */
+.criteria-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.criterion {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.criterion.bad {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* Runaway Button Arena */
+.button-arena {
+  position: relative;
+  min-height: 70px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Searing Blinding Neon Runaway Button */
+.runaway-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 52px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #042f2e;
+  /* Blinding neon yellow to cyan gradient */
+  background: linear-gradient(135deg, #facc15 0%, #4ade80 50%, #38bdf8 100%);
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(250, 204, 21, 0.45);
+  transition: transform 0.15s cubic-bezier(0.18, 0.89, 0.32, 1.28), box-shadow 0.2s;
+  z-index: 100;
+  user-select: none;
+  will-change: transform;
+}
+
+.runaway-btn:hover {
+  box-shadow: 0 15px 35px rgba(74, 222, 128, 0.6);
+}
+
+/* Taunt Bubble */
+.taunt-bubble {
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  background: #ffffff;
+  border: 2px solid #f43f5e;
+  color: #e11d48;
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.25);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 101;
+}
+
+.taunt-bubble.visible {
+  transform: translateX(-50%) scale(1);
+}
+
+.taunt-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: #ffffff transparent transparent;
+}
+
+/* 5-Second Pitch-Black Screen Overlay */
+.blank-screen-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 9999999;
+  display: none;
+  cursor: none;
+  user-select: none;
+}
+
+.blank-screen-overlay.active {
+  display: block;
+}
+
+/* Checkbox & Extras */
+.form-extras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  font-size: 0.8rem;
+}
+
+.troll-checkbox-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.troll-checkbox-wrapper input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #ca8a04;
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: #0284c7;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.cheat-hint {
+  margin-top: 14px;
+  font-size: 0.68rem;
+  color: #cbd5e1; /* Eye-straining faint */
+  text-align: center;
+  user-select: none;
+}
+
+.cheat-hint:hover {
+  color: #64748b;
+}
+
+/* ========================================================== */
+/* PROFILE PAGE - BLINDING BRIGHT & INDIA RAGEBAIT            */
+/* ========================================================== */
+
+.profile-card {
+  max-width: 680px;
+}
+
+/* IRCTC Tatkal Inactivity Timeout Bar */
+.timeout-bar {
+  background: #fef08a;
+  border: 1.5px solid #fde047;
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.timeout-text {
+  font-size: 0.82rem;
+  color: #854d0e;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.timeout-countdown {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #b91c1c;
+  background: #ffffff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid #fca5a5;
+}
+
+.timeout-extend-btn {
+  background: #ffffff;
+  border: 1.5px solid #ca8a04;
+  color: #854d0e;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timeout-extend-btn:hover {
+  background: #fefce8;
+}
+
+/* Profile Avatar Section (Indian Reference Troll) */
+.profile-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1.5px solid #fef08a;
+  margin-bottom: 24px;
+}
+
+.avatar-container {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  border: 3px solid #f59e0b;
+  overflow: hidden;
+  background: #0284c7; /* Classic Sarkari Passport blue */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-container:hover {
+  transform: scale(1.05);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-badge-stamp {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: #dc2626;
+  color: white;
+  font-size: 0.55rem;
+  font-weight: 800;
+  padding: 2px 4px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 0.7rem;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  padding: 4px;
+}
+
+.avatar-container:hover .avatar-overlay {
+  opacity: 1;
+}
+
+.profile-meta h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.profile-meta p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+/* Aadhaar / Phone Slider */
+.slider-display {
+  font-family: monospace;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0369a1;
+  background: #f0f9ff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #bae6fd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-fine-tune {
+  display: flex;
+  gap: 6px;
+}
+
+.fine-btn {
+  background: #ffffff;
+  border: 1px solid #7dd3fc;
+  color: #0369a1;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.fine-btn:hover {
+  background: #e0f2fe;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #fde047;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #0284c7;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.4);
+}
+
+/* Swapping Buttons Arena */
+.swap-button-arena {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  position: relative;
+  min-height: 54px;
+}
+
+.action-btn {
+  flex: 1;
+  height: 52px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.94rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
+  user-select: none;
+}
+
+/* Indian Pressure Cooker Save Button */
+.btn-save {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+}
+
+.btn-save:hover {
+  box-shadow: 0 8px 22px rgba(16, 185, 129, 0.5);
+}
+
+/* Indian Soap Opera Delete Button */
+.btn-delete {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.35);
+}
+
+.btn-delete:hover {
+  box-shadow: 0 8px 22px rgba(239, 68, 68, 0.5);
+}
+
+/* EKTA KAPOOR INDIAN SOAP OPERA DRAMATIC 3-STEP SCREEN FLASH */
+.serial-drama-active {
+  animation: soap-opera-zoom 1.5s steps(3, end) forwards;
+}
+
+@keyframes soap-opera-zoom {
+  0% { transform: scale(1); filter: contrast(100%); }
+  33% { transform: scale(1.15); filter: contrast(300%) invert(100%) hue-rotate(90deg); }
+  66% { transform: scale(1.3); filter: contrast(400%) saturate(300%) hue-rotate(180deg); }
+  100% { transform: scale(1); filter: contrast(100%); }
+}
+
+.serial-flash-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999999;
+  display: none;
+}
+
+.serial-flash-overlay.active {
+  display: block;
+  animation: triple-flash 1.2s ease-out;
+}
+
+@keyframes triple-flash {
+  0% { background: rgba(255, 0, 0, 0.85); }
+  30% { background: rgba(0, 0, 255, 0.85); }
+  60% { background: rgba(255, 255, 0, 0.95); }
+  100% { background: transparent; }
+}
+
+/* Screen Eyelash */
+.screen-hair {
+  position: fixed;
+  top: 36%;
+  left: 62%;
+  width: 44px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0.9;
+  transition: transform 0.1s ease-out;
+}
+
+.screen-hair svg path {
+  stroke: #1e293b;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  fill: none;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+/* Dead Pixel */
+.dead-pixel {
+  position: fixed;
+  top: 210px;
+  left: 380px;
+  width: 3px;
+  height: 3px;
+  background-color: #ff0000;
+  box-shadow: 0 0 2px #ff0000;
+  z-index: 99998;
+  pointer-events: none;
+}
+
+/* Rage Toast */
+.rage-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #ffffff;
+  border: 2px solid #fde047;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(202, 138, 4, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10000;
+  transform: translateY(140%);
+  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.rage-toast.show {
+  transform: translateY(0);
+}
+
+.toast-icon {
+  font-size: 1.4rem;
+}
+
+.toast-content h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.toast-content p {
+  font-size: 0.75rem;
+  color: #64748b;
+}

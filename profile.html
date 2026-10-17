@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraDesk™ Bharat | National Zero-Trust Citizen Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛺</text></svg>">
+</head>
+<body>
+
+  <!-- Ekta Kapoor Indian Daily Soap Opera 3-Step Dramatic Flash Overlay -->
+  <div class="serial-flash-overlay" id="serial-flash-overlay"></div>
+
+  <!-- Realistic Fake Screen Eyelash / Hair -->
+  <div class="screen-hair" id="screen-hair" title="Try wiping your screen!">
+    <svg viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 2,4 C 18,22 34,14 48,26" />
+    </svg>
+  </div>
+
+  <!-- Fake Dead Pixel -->
+  <div class="dead-pixel" title="Dead hardware subpixel"></div>
+
+  <!-- Rage Toast Notification -->
+  <div class="rage-toast" id="rage-toast">
+    <div class="toast-icon">🛺</div>
+    <div class="toast-content">
+      <h4 id="toast-title">IRCTC Alert</h4>
+      <p id="toast-msg">Notice message here.</p>
+    </div>
+  </div>
+
+  <div class="app-container" id="main-container">
+    <div class="brand-badge">
+      <span class="brand-dot"></span>
+      Govt. of Bharat Verified Citizen Node #9482-DL
+    </div>
+
+    <div class="profile-card" id="profile-card">
+      
+      <!-- IRCTC Tatkal Inactivity Timeout Bar -->
+      <div class="timeout-bar">
+        <div class="timeout-text">
+          <span>🚂</span>
+          <span>IRCTC Tatkal Session Closes In:</span>
+          <span class="timeout-countdown" id="session-countdown">00:09</span>
+        </div>
+        <button type="button" class="timeout-extend-btn" id="extend-session-btn">
+          Refresh Tatkal (+30s)
+        </button>
+      </div>
+
+      <!-- Profile Header / Indian Avatar Section -->
+      <div class="profile-hero">
+        <div class="avatar-container" id="avatar-box" title="Click to upload/change photo">
+          <!-- Default Sarkari Passport Photo -->
+          <div id="avatar-content" style="width: 100%; height: 100%;">
+            <svg class="avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <!-- Classic Sarkari Blue Background -->
+              <rect width="100" height="100" fill="#0284c7" />
+              <!-- Traumatized Indian Passport Photo Character -->
+              <circle cx="50" cy="40" r="22" fill="#d4a373" />
+              <!-- Hair parted with oil -->
+              <path d="M 28,34 Q 50,14 72,34 Q 68,20 50,20 Q 32,20 28,34" fill="#1e293b" />
+              <!-- Glasses -->
+              <rect x="36" y="36" width="11" height="9" rx="2" fill="none" stroke="#000000" stroke-width="1.8" />
+              <rect x="53" y="36" width="11" height="9" rx="2" fill="none" stroke="#000000" stroke-width="1.8" />
+              <line x1="47" y1="40" x2="53" y2="40" stroke="#000000" stroke-width="1.8" />
+              <circle cx="41.5" cy="40.5" r="2" fill="#000000" />
+              <circle cx="58.5" cy="40.5" r="2" fill="#000000" />
+              <!-- Intense mustache -->
+              <path d="M 40,49 Q 50,47 60,49 Q 50,54 40,49" fill="#1e293b" />
+              <!-- Stern mouth -->
+              <line x1="44" y1="55" x2="56" y2="55" stroke="#78350f" stroke-width="1.5" />
+              <!-- White Kurta / Shirt -->
+              <path d="M 22,100 L 28,68 Q 50,62 72,68 L 78,100 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="avatar-badge-stamp" id="avatar-badge">REJECTED</div>
+          <div class="avatar-overlay">Upload Photo</div>
+        </div>
+        <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+
+        <div class="profile-meta">
+          <h2 id="profile-name">Ramesh Kumar Sharma</h2>
+          <p id="profile-title">Official Designation: Senior Queue Stander (Govt. Office)</p>
+          <p style="font-size: 0.74rem; color: #b45309; margin-top: 4px; font-weight: 700;">
+            🚩 Kundali Status: High Manglik Dosh (Requires Peepal Tree Marriage)
+          </p>
+        </div>
+      </div>
+
+      <!-- Settings Form -->
+      <form id="profile-form" onsubmit="return false;">
+        
+        <!-- Field 1: Official Name -->
+        <div class="form-group">
+          <div class="label-row">
+            <label for="display-name">Official Name (As Per 10th Board Admit Card)</label>
+            <span class="field-badge" style="color: #b91c1c; background: #fee2e2;">Cannot Modify</span>
+          </div>
+          <div class="input-wrapper">
+            <svg class="input-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+            <input 
+              type="text" 
+              id="display-name" 
+              value="Ramesh Kumar Sharma (S/O Shri Sharma Ji)" 
+              readonly 
+              style="cursor: not-allowed; font-weight: 700; color: #475569;"
+            >
+          </div>
+        </div>
+
+        <!-- Field 2: Linked 12-Digit Aadhaar Card Slider -->
+        <div class="form-group">
+          <div class="label-row">
+            <label for="aadhaar-slider">Linked 12-Digit Aadhaar Number (Precision Slider)</label>
+            <span class="field-badge" style="color: #0369a1; background: #e0f2fe;">Govt Mandatory</span>
+          </div>
+
+          <div class="phone-slider-wrapper">
+            <div class="slider-display">
+              <span id="aadhaar-display">5412 8901 2345</span>
+              <div class="slider-fine-tune">
+                <button type="button" class="fine-btn" id="aadhaar-dec" title="Subtract 1 unit">-1</button>
+                <button type="button" class="fine-btn" id="aadhaar-inc" title="Add 1 unit">+1</button>
+              </div>
+            </div>
+            <input 
+              type="range" 
+              id="aadhaar-slider" 
+              min="100000000000" 
+              max="999999999999" 
+              step="1" 
+              value="541289012345"
+            >
+            <span style="font-size: 0.72rem; color: #64748b; font-weight: 500;">
+              Slide carefully to land on your exact 12-digit Aadhaar number. OTP will be sent to BSNL SIM from 2004.
+            </span>
+          </div>
+        </div>
+
+        <!-- Field 3: Location / City in India -->
+        <div class="form-group">
+          <div class="label-row">
+            <label for="city-select">Current Residential Metro & Traffic Status</label>
+            <span class="field-badge" style="color: #15803d; background: #dcfce7;">GPS Locked</span>
+          </div>
+          <div class="input-wrapper">
+            <select id="city-select" style="width: 100%; height: 48px; background: #fefce8; border: 1.5px solid #fef08a; border-radius: 12px; padding: 0 16px; color: #334155; outline: none; font-family: inherit; font-weight: 600;">
+              <option>Bengaluru (Silk Board Flyover - Waiting 4 hrs 12 mins)</option>
+              <option>Mumbai (Virar Fast Local 8:43 AM - Hanging from footboard)</option>
+              <option>Pune (Offices closed between 1:00 PM and 4:00 PM for afternoon nap)</option>
+              <option>Delhi NCR (AQI 999+ - Inhaling 45 cigarettes/second)</option>
+              <option>Goa (Trip planned on WhatsApp, 100% will be cancelled)</option>
+              <option>Gurugram Cyber City (Submerged in 3 feet rain water)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Field 4: Pressure Cooker Whistle Volume & Rickshaw Honk -->
+        <div class="form-group">
+          <div class="label-row">
+            <label for="volume-slider">Pressure Cooker Seeti & Rickshaw Horn Volume</label>
+            <span class="field-badge" id="volume-display" style="color: #b91c1c; background: #fee2e2;">100%</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <input 
+              type="range" 
+              id="volume-slider" 
+              min="0" 
+              max="100" 
+              step="1" 
+              value="100"
+            >
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+              <span style="font-size: 0.72rem; color: #64748b; font-weight: 500;">
+                Gravity enforcement: Volume naturally falls back to 100% if released.
+              </span>
+              <button type="button" id="btn-honk-horn" class="fine-btn" style="padding: 3px 10px; background: #fef08a; border-color: #facc15; color: #854d0e;">
+                📢 Test Auto Horn
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swapping Action Buttons -->
+        <div class="swap-button-arena" id="swap-arena">
+          <button type="button" class="action-btn btn-save" id="btn-save" style="order: 1;">
+            <span>🍲 Save Profile Changes</span>
+          </button>
+
+          <button type="button" class="action-btn btn-delete" id="btn-delete" style="order: 2;">
+            <span>⚡ Permanently Wipe Account</span>
+          </button>
+        </div>
+
+      </form>
+
+      <div class="auth-footer" style="margin-top: 28px;">
+        <a href="index.html" style="color: #0284c7; font-size: 0.8rem; text-decoration: underline; font-weight: 600;">
+          ← Return to Login Page (Subject to Agility Verification)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="rage-audio.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>
